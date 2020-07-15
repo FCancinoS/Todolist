@@ -8,7 +8,6 @@ clear.addEventListener("click",TodoClear);
 mark.addEventListener("click",TodoMark);
 del.addEventListener("click",TodoDel);
 
-
 function TodoPost(e){
 e.preventDefault();
 // Necesito obtener el valor de la caja
@@ -17,10 +16,7 @@ var list = document.getElementById("todoList");
 
 let currentListHTML = list.innerHTML;
 list.innerHTML = currentListHTML + '<input type = "checkbox" name="todo" /> ' + todo + '<br>';
-
 }
-
-
 function TodoClear(e){
     e.preventDefault();
     var todos = document.getElementsByName("todo");
@@ -28,7 +24,6 @@ function TodoClear(e){
         todos[i].checked = false;
     }
 }
-
 function TodoMark(e){
     e.preventDefault();
     var todos = document.getElementsByName("todo");
@@ -36,7 +31,6 @@ function TodoMark(e){
         todos[i].checked = true;
     }
 }
-
 function TodoDel(e){
     e.preventDefault();
     var list = document.getElementById("todoList");
